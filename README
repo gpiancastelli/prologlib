@@ -1,4 +1,4 @@
-prologlib is an ISO Prolog processor written in Python 3 that aims at providing
+prologlib is an ISO Prolog processor written in Python 3. It aims at providing
 an open source Prolog implementation that strictly follows the non-free ISO
 standard document (ISO/IEC 13211-1), from execution model to builtin predicates
 and functors.
