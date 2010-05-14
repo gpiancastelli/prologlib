@@ -2135,6 +2135,7 @@ class AtomConcatTest(unittest.TestCase):
         error = Atomic('instantiation_error')
         self.assertEquals(error, caught.error_term())
 
+# FIXME Anonymous variables are still bounded and present in substitutions?
 class SubAtomTest(unittest.TestCase):
     def setUp(self):
         self.engine = Engine()
