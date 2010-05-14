@@ -1,0 +1,41 @@
+prologlib is an ISO Prolog processor written in Python 3 that aims at providing
+an open source Prolog implementation that strictly follows the non-free ISO
+standard document (ISO/IEC 13211-1), from execution model to builtin predicates
+and functors.
+
+Usage:
+
+$ hg clone http://bitbucket.org/gpiancastelli/prologlib/
+$ cd prologlib
+$ python3.1 toplevel.py
+
+Besides toplevel.py, in the project root you will also find the test.py script,
+used to drive the execution of unit/acceptance tests for prologlib. If you run
+it without arguments, test.py executes all the tests in the tests subdirectory,
+showing results that should include no failures. You will note, however, that
+some tests are skipped: typically, they involve some unimplemented feature. You
+may also run test.py providing the name of a single test file, to execute only
+that set of tests. For example:
+
+$ test.py builtin-predicates
+$ [...executing tests in tests/test-builtin-predicates.py...]
+$ test.py parser
+$ [...executing tests in tests/test-parser.py...]
+
+No real API is provided. If you want to integrate prologlib into Python code,
+have a look at how prologlib.ui uses prologlib.core.Engine.
+
+Source code includes some examples of Prolog code, to be found in the
+subdirectory examples. Those include classic Prolog benchmarks, stored in their
+own subdirectory.
+
+BE WARNED! prologlib is extremely slow. It's unlikely that you will find it to
+be suitable for serious (and less serious) work.
+
+prologlib's code is distributed under the BSD license.
+
+If you are interested in prologlib's development, please visit prologlib's site
+on Bitbucket and take advantage of the available tools. Any comment or feedback
+that does not fit into Bitbucket facilities should be addressed to:
+
+<giulio.piancastelli@gmail.com>
